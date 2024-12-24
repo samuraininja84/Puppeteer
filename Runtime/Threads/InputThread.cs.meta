@@ -1,0 +1,12 @@
+fileFormatVersion: 2
+guid: 8c46733dbea614549a806bede193eddf
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - puppet: {fileID: 11400000, guid: f756d4d369998e740b299b8c6cc1a015, type: 2}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
