@@ -15,14 +15,14 @@
 		- If you need a new Puppet ScriptableObject, you can create one by right-clicking in the Project window and selecting Create -> Puppeteer -> New Puppet.
 	- To set the move direction on the Input Thread, you can do something like this:
 		```csharp
-		- moveDirection.x = UnityEngine.Input.GetAxis("Horizontal");
-	  	- moveDirection.y = UnityEngine.Input.GetAxis("Vertical");
-	  	- thread.SetMoveDirection(moveDirection);
+		moveDirection.x = UnityEngine.Input.GetAxis("Horizontal");
+	  	moveDirection.y = UnityEngine.Input.GetAxis("Vertical");
+	  	thread.SetMoveDirection(moveDirection);
 		```
 	- To get the move direction back after any potential modifications, you can do something like this.
 	  	```csharp
-		- puppet.GetState();
-	  	- rb.velocity = puppet.GetMoveDirection().normalized * moveSpeed;
+		puppet.GetState();
+	  	rb.velocity = puppet.GetMoveDirection().normalized * moveSpeed;
 		```
   
 # Inspector Set-Up:
@@ -43,13 +43,13 @@
 - On top of the Puppets & Threads, you can also make the Input State struct for your own needs.
 	- By default, the Input State struct that they use contains:
 		```csharp
-	  	- public Vector2 moveDirection;
-	  	- public bool crouching;
-	  	- public bool sprinting;
-	  	- public bool canJump;
+	  	public Vector2 moveDirection;
+	  	public bool crouching;
+	  	public bool sprinting;
+	  	public bool canJump;
 	  	```
 	- And it has a Custom Property Drawer for these fields called Input State Property Drawer;
 	- If you require more or less inputs than this:
 		- You can either add/remove them directly from each script.
-		- Make a new Input State struct for your systems.
+		- Make a new Input State struct for your systems using this as a reference.
   
