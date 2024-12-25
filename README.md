@@ -10,20 +10,20 @@
    
 # Editor Set-Up:
 - On your Player Script:
-- Add a [SerializeField] Private / Public Puppet to your Script.
-- Add a [SerializeField] Private / Public Input Thread to your Script.
-	- If you need a new Puppet ScriptableObject, you can create one by right-clicking in the Project window and selecting Create -> Puppeteer -> New Puppet.
-- To set the move direction on the Input Thread, you can do something like this:
-	```csharp
-	- moveDirection.x = UnityEngine.Input.GetAxis("Horizontal");
-  	- moveDirection.y = UnityEngine.Input.GetAxis("Vertical");
-  	- thread.SetMoveDirection(moveDirection);
-	```
-- To get the move direction back after any potential modifications, you can do something like this.
-  	```csharp
-	- puppet.GetState();
-  	- rb.velocity = puppet.GetMoveDirection().normalized * moveSpeed;
-	```
+	- Add a [SerializeField] Private / Public Puppet to your Script.
+	- Add a [SerializeField] Private / Public Input Thread to your Script.
+		- If you need a new Puppet ScriptableObject, you can create one by right-clicking in the Project window and selecting Create -> Puppeteer -> New Puppet.
+	- To set the move direction on the Input Thread, you can do something like this:
+		```csharp
+		- moveDirection.x = UnityEngine.Input.GetAxis("Horizontal");
+	  	- moveDirection.y = UnityEngine.Input.GetAxis("Vertical");
+	  	- thread.SetMoveDirection(moveDirection);
+		```
+	- To get the move direction back after any potential modifications, you can do something like this.
+	  	```csharp
+		- puppet.GetState();
+	  	- rb.velocity = puppet.GetMoveDirection().normalized * moveSpeed;
+		```
   
 # Inspector Set-Up:
 - In the Inspector, add the Input Thread to your Player.
