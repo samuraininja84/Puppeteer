@@ -1,4 +1,4 @@
-# Puppeteer - A Way Of Taking Control From The Player
+# Puppeteer - A Framework For Taking Control From The Player
 
 - Purpose:
 	- Allows the user to dynamically set up where a character's input can come from.
@@ -38,7 +38,7 @@
 		- Navigation Thread: Used to make a character move toward a target in a straight line.
 	- If need be, you can make your own threads by inheriting them from Thread Base and implementing their methods.
 - You can also make your own Puppets by implementing the PuppetBase interface and doing the same
-- If you decide to make your own Puppet and Thread Bases, you can also make the Input State that they use your own.
+- On top of the Puppets & Threads, you can also make the Input State struct for your own needs.
 	- By default, the Input State struct that they use contains:
 		```csharp
 	  	- public Vector2 moveDirection;
@@ -49,5 +49,5 @@
 	- And it has a Custom Property Drawer for these fields called Input State Property Drawer;
 	- If you require more or less inputs than this:
 		- You can either add/remove them directly from each script.
-		- Make a new Input State struct for your systems using this as a reference. 
+		- Make a new Input State struct for your systems.
   
