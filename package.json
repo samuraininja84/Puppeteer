@@ -1,0 +1,11 @@
+{
+  "name": "com.samuraininja.puppeteer",
+  "version": "1.0.0",
+  "displayName": "Puppeteer",
+  "description": "A Framework For Taking Control From The Player.",
+  "unity": "2022.3",
+  "author": {
+    "name": "Samuraininja84",
+    "url": "https://github.com/samuaraininja"
+  }
+}
