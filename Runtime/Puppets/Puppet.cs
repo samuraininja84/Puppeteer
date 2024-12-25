@@ -5,7 +5,7 @@ using UnityEngine;
 namespace Puppeteer
 {
     [CreateAssetMenu(fileName = "New Puppet", menuName = "Puppeteer/New Puppet")]
-    public class Puppet : ScriptableObject, IPuppet
+    public class Puppet : PuppetBase
     {
         [Header("State")]
         public InputState inputState;
@@ -29,31 +29,31 @@ namespace Puppeteer
             return inputState;
         }
 
-        public Vector2 GetMoveDirection()
+        public override Vector2 GetMoveDirection()
         {
             return inputState.moveDirection;
         }
 
-        public void RegisterListener(ThreadBase thread)
+        public override void RegisterListener(ThreadBase thread)
         {
             threads.Add(thread);
             SortThreadsByPriority();
         }
 
-        public void UnregisterListener(ThreadBase thread)
+        public override void UnregisterListener(ThreadBase thread)
         {
             threads.Remove(thread);
             SortThreadsByPriority();
         }
 
-        public List<ThreadBase> SortThreadsByPriority()
+        public override List<ThreadBase> SortThreadsByPriority()
         {
             // Set the highest priority thread to the last in the list
             threads.Sort((a, b) => a.GetPriority().CompareTo(b.GetPriority()));
             return threads;
         }
 
-        public void SetPriority(ThreadBase thread, int priority)
+        public override void SetPriority(ThreadBase thread, int priority)
         {
             if (priority < 0) priority = 0;
             else if (priority > 10) priority = 10;
@@ -61,7 +61,7 @@ namespace Puppeteer
             SortThreadsByPriority();
         }
 
-        public void SetPriority(int thread, int priority)
+        public override void SetPriority(int thread, int priority)
         {
             if (priority < 0) priority = 0;
             else if (priority > 10) priority = 10;

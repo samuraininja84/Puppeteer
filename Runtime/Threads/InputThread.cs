@@ -9,7 +9,7 @@ namespace Puppeteer
         public InputState inputState;
 
         [Header("General Settings")]
-        public ThreadActivationType activationType = ThreadActivationType.Manual;
+        public ThreadActivationType activationType = ThreadActivationType.Automatic;
         public ThreadPriority priority = ThreadPriority.Medium;
 
         private void OnEnable()
