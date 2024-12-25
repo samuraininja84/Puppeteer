@@ -2,7 +2,9 @@
 
 - Purpose:
 	- Allows the user to dynamically set up where a character's input can come from.
-	- Ex: You can override the movement direction of a character with another source like an AI Controller
+	- Example:
+ 		- Overriding the movement direction of a character with another source, like an AI Controller.
+   		- Real-time action cutscene that makes the player jump, shoot, or dodge.
 
 - Based on this video by aartificial: https://www.youtube.com/watch?v=pOEyYwKtHJo
    
