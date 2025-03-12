@@ -12,7 +12,7 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ### Removed
 
-## [1.0.0] - 2024-24-08
+## [1.0.0](2024-24-08)
 
 ### Added
 - Base Puppet & Three Thread Types
