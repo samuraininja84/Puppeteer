@@ -6,7 +6,7 @@ MonoImporter:
   defaultReferences:
   - puppet: {fileID: 11400000, guid: f756d4d369998e740b299b8c6cc1a015, type: 2}
   executionOrder: 0
-  icon: {instanceID: 0}
+  icon: {fileID: 2800000, guid: 98cb5fd1820cddb42b3edf6903b80f2e, type: 3}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
