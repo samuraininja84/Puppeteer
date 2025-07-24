@@ -4,10 +4,22 @@
   "displayName": "Puppeteer",
   "description": "A Framework For Taking Control From The Player.",
   "unity": "2022.3",
+  "documentationUrl": "https://github.com/samuraininja84/Puppeteer/blob/main/README.md",
+  "changelogUrl": "https://github.com/samuraininja84/Puppeteer/blob/main/CHANGELOG.md",
+  "licensesUrl": "https://github.com/samuraininja84/Puppeteer/blob/main/LICENSE.md",
   "author": {
     "name": "Samuraininja84",
-    "url": "https://github.com/samuaraininja"
+    "url": "https://github.com/samuraininja84"
   },
+  "keywords": [
+    "control",
+    "player",
+    "input",
+    "framework",
+    "tool",
+    "editor",
+    "utility"
+  ],
   "hideInEditor": false,
   "type": "tool",
   "_fingerprint": "e8057263774a1da50326e234ec260f70f772de7e"
