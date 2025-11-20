@@ -64,17 +64,14 @@ namespace Puppeteer
 
         protected virtual void OnDrawGizmosSelected()
         {
-            // Ensure puppet is assigned
-            if (puppet == null) return;
-
             // Set Gizmo color
             Gizmos.color = Color.cyan;
 
             // Draw a line indicating the move direction
-            Gizmos.DrawLine(puppet.transform.position, puppet.transform.position + (Vector3)GetMoveDirection());
+            Gizmos.DrawLine(transform.position, transform.position + (Vector3)GetMoveDirection());
 
             // Draw a sphere at the end of the direction line
-            Gizmos.DrawSphere(puppet.transform.position + (Vector3)GetMoveDirection(), 0.1f);
+            Gizmos.DrawSphere(transform.position + (Vector3)GetMoveDirection(), 0.1f);
         }
 
         public enum Direction
