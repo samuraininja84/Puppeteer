@@ -70,7 +70,7 @@ namespace Puppeteer
             return arrowDirection;
         }
 
-        protected virtual void OnDrawGizmosSelected()
+        protected virtual void OnDrawGizmos()
         {
             // Check if the enter interaction is null or if the move direction is zero
             if (GetMoveDirection() != Vector2.zero)
