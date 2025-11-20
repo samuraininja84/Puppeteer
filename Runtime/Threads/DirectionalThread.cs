@@ -62,6 +62,14 @@ namespace Puppeteer
 
         public bool GetAutomatic() => activationType == ThreadActivationType.Automatic;
 
+        private Vector3 GetArrowDirection(Vector3 direction, bool orthographic = true)
+        {
+            Vector3 arrowDirection = Vector3.zero;
+            if (orthographic) arrowDirection = direction;
+            else arrowDirection = new Vector3(direction.x, 0, direction.y);
+            return arrowDirection;
+        }
+
         protected virtual void OnDrawGizmosSelected()
         {
             // Check if the enter interaction is null or if the move direction is zero
