@@ -29,30 +29,15 @@ namespace Puppeteer
             if (puppet != null) puppet.inputState = inputState;
         }
 
-        public override void AddListener()
-        {
-            puppet.RegisterListener(this);
-        }
+        public override void AddListener() => puppet.RegisterListener(this);
 
-        public override void RemoveListener()
-        {
-            puppet.UnregisterListener(this);
-        }
+        public override void RemoveListener() => puppet.UnregisterListener(this);
 
-        public override void SetPriority(int index)
-        {
-            priority = (ThreadPriority)index;
-        }
+        public override void SetPriority(int index) => priority = (ThreadPriority)index;
 
-        public override void SetMoveDirection(Vector2 moveDirection)
-        {
-            inputState.moveDirection = moveDirection;
-        }
+        public override void SetMoveDirection(Vector2 moveDirection) => inputState.moveDirection = moveDirection;
 
-        public override int GetPriority()
-        {
-            return (int)priority;
-        }
+        public override int GetPriority() => (int)priority;
 
         public override Vector2 GetMoveDirection()
         {
@@ -73,14 +58,23 @@ namespace Puppeteer
             }
         }
 
-        public override bool ThreadActive()
-        {
-            return puppet.threads.Contains(this);
-        }
+        public override bool ThreadActive() => puppet.threads.Contains(this);
 
-        public bool GetAutomatic()
+        public bool GetAutomatic() => activationType == ThreadActivationType.Automatic;
+
+        protected virtual void OnDrawGizmosSelected()
         {
-            return activationType == ThreadActivationType.Automatic;
+            // Ensure puppet is assigned
+            if (puppet == null) return;
+
+            // Set Gizmo color
+            Gizmos.color = Color.cyan;
+
+            // Draw a line indicating the move direction
+            Gizmos.DrawLine(puppet.transform.position, puppet.transform.position + (Vector3)GetMoveDirection());
+
+            // Draw a sphere at the end of the direction line
+            Gizmos.DrawSphere(puppet.transform.position + (Vector3)GetMoveDirection(), 0.1f);
         }
 
         public enum Direction
@@ -93,3 +87,4 @@ namespace Puppeteer
         }
     }
 }
+
