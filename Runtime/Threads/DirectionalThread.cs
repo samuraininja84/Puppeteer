@@ -71,7 +71,7 @@ namespace Puppeteer
             Gizmos.DrawLine(transform.position, transform.position + (Vector3)GetMoveDirection());
 
             // Draw a sphere at the end of the direction line
-            Gizmos.DrawSphere(transform.position + (Vector3)GetMoveDirection(), 0.1f);
+            Gizmos.DrawWireSphere(transform.position + (Vector3)GetMoveDirection(), 0.1f);
         }
 
         public enum Direction
